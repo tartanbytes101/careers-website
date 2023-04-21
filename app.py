@@ -1,11 +1,11 @@
-from flask import Flask
-from datetime import datetime
+from flask import Flask, render_template
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-  return "Hello World!\n "+ "Today's date is : "+datetime.now().strftime("%d/%m/%Y")
+  return render_template("home.html")
 
 
 #__start the app
