@@ -31,7 +31,9 @@ JOBS = [{
 
 @app.route("/")
 def hello_world():
-  return render_template("homeB.html", jobs=JOBS, company_name="cacaBoom")
+  return render_template("homeB.html",
+                         jobs=JOBS,
+                         company_name="TartanBytes101")
 
 
 #__json endpoint for API (Application Programming Interface)
