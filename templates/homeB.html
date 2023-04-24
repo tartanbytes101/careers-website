@@ -17,12 +17,16 @@
 </head>
 <body>
   <div class="container">
-  <h1 class="text-center mt-2 mb-4">cacaBoom Careers</h1>
+  <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
   <img class="img-fluid" id="banner" src="static/banner.jpg">
   <h2 class="text-center mt-2 mb-4">About cacaBoom</h2>
   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus egestas sed. Diam sollicitudin tempor id eu nisl. Commodo nulla facilisi nullam vehicula. Sed nisi lacus sed viverra tellus in. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. At tellus at urna condimentum mattis pellentesque id. Purus gravida quis blandit turpis cursus in hac habitasse. Malesuada pellentesque elit eget gravida cum. Eget egestas purus viverra accumsan in nisl. Lacus vel facilisis volutpat est velit egestas dui id ornare.</p>
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-  <p class="bodytext">TODO - Show the jobs here</p>
+  <div>
+    {% for job in jobs %} 
+     {% include 'jobitem.html' %}
+    {% endfor %}
+  </div>
   <div id="contact_us_container" class="text-center">
     <button class="btn btn-primary btn-lg">Contact Us</button>
     <p class="mt-4">Copyright 2023 cacaBoom</p>
